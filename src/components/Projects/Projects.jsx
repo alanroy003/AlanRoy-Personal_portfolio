@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
-import projectsData from "./projectsData.json";
+import projectsData from "../../assets/projects-data/Projects/projectsData.json";
 
 const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(4);

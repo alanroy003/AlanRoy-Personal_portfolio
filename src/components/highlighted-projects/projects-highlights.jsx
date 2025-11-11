@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./projects-highlights.css";
-import projectsData from "./projectsData.json";
+import projectsData from "../../assets/projects-data/highlighted-projects/projectsData.json";
 
 const ProjectsHighlights = () => {
   const [activeIndexes, setActiveIndexes] = useState([]);

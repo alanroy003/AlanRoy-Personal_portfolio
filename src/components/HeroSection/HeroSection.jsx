@@ -1,9 +1,6 @@
 // src/components/HeroSection/HeroSection.jsx
 import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
-import heroImage from "../../assets/Hero-main.png";
-import Arrowimg from "../../assets/Group-9.svg";
-import Circletriangle from "../../assets/Circle_triangle.svg";
 import {
   FaLinkedinIn,
   FaInstagram,
@@ -92,7 +89,7 @@ const HeroSection = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <motion.img
-              src={Circletriangle}
+              src="/assets/imgs/HeroSection/Circle_triangle.svg"
               alt="Circletriangle"
               className="Circletriangle"
               animate={{ rotate: 360 }}
@@ -112,7 +109,11 @@ const HeroSection = () => {
               <svg className="arrow arrow1" viewBox="0 0 100 80">
                 <polygon points="35,10 10,35 35,60 70,60 45,35 70,10" />
               </svg>
-              <img src={heroImage} alt="Alan Roy" className="hero-image" />
+              <img
+                src="/assets/imgs/HeroSection/Hero-main.png"
+                alt="Alan Roy"
+                className="hero-image"
+              />
 
               <svg className="arrow arrow2" viewBox="0 0 80 80">
                 <polygon points="35,10 10,35 35,60 60,60 35,35 60,10" />
@@ -127,7 +128,7 @@ const HeroSection = () => {
           {/* RIGHT SIDE — Name + Socials */}
           <div className="hero-right">
             <motion.img
-              src={Arrowimg}
+              src="/assets/imgs/HeroSection/Group-9.svg"
               alt="Arrow"
               className="Arrow-image"
               style={{ y: socialsY, opacity: socialsOpacity }}
