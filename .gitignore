@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+portfolio-admin/portfolio-backend/.env
+portfolio-admin/portfolio-backend/node_modules/

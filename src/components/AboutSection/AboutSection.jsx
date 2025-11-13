@@ -95,7 +95,7 @@ const AboutSection = () => {
               <div className="skills-tags animated-tags">
                 <span>Django</span>
                 <span>Flask</span>
-                <span>.NET</span>
+                {/* <span>.NET</span> */}
               </div>
             </div>
 
@@ -113,7 +113,7 @@ const AboutSection = () => {
             <div className="skills-group">
               <h4>Cloud & DevOps</h4>
               <div className="skills-tags animated-tags">
-                <span>AWS</span>
+                {/* <span>AWS</span> */}
                 <span>GCP</span>
                 <span>Firebase</span>
                 <span>Docker</span>

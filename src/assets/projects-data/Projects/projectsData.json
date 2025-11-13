@@ -12,7 +12,7 @@
       "CSS",
       "JavaScript"
     ],
-    "github_link": "https://github.com/Alan21303/community-issue-tracker",
+    "github_link": "https://github.com/alanroy003/community-issue-tracker",
     "Live": false,
     "livedemo_link": ""
   },
@@ -30,7 +30,7 @@
       "CSS",
       "jQuery"
     ],
-    "github_link": "https://github.com/Alan21303/EmployeeManagement-.net-MVC",
+    "github_link": "https://github.com/alanroy003/EmployeeManagement-.net-MVC",
     "Live": false,
     "livedemo_link": ""
   },
@@ -47,7 +47,7 @@
       "Pandas",
       "Scikit-learn"
     ],
-    "github_link": "https://github.com/Alan21303/rossmann-sales-forecast",
+    "github_link": "https://github.com/alanroy003/rossmann-sales-forecast",
     "Live": false,
     "livedemo_link": ""
   },
@@ -64,7 +64,7 @@
       "Streamlit",
       "Docker"
     ],
-    "github_link": "https://github.com/Alan21303/titanic-end2end-ml",
+    "github_link": "https://github.com/alanroy003/titanic-end2end-ml",
     "Live": false,
     "livedemo_link": ""
   },
@@ -74,7 +74,7 @@
     "img_url": "",
     "description": "A responsive travel website built with Django and MongoDB that allows users to explore destinations, plan trips, view packages, and share reviews through a modern, user-friendly interface.",
     "tech": ["Django", "HTML", "CSS", "JavaScript", "MongoDB"],
-    "github_link": "https://github.com/Alan21303/Travello",
+    "github_link": "https://github.com/alanroy003/Travello",
     "Live": false,
     "livedemo_link": ""
   },
@@ -90,7 +90,7 @@
       "Bootstrap",
       "jQuery"
     ],
-    "github_link": "https://github.com/Alan21303/AspNetCore-ToDo-App-MVC",
+    "github_link": "https://github.com/alanroy003/AspNetCore-ToDo-App-MVC",
     "Live": false,
     "livedemo_link": ""
   },
@@ -100,7 +100,7 @@
     "img_url": "/projectImages/Chronic-Diseases-Prediction/Chronic-Diseases-Prediction.png",
     "description": "A machine learning-based web application built with Python that predicts the likelihood of multiple chronic diseases using trained models and health data inputs through a simple interactive interface.",
     "tech": ["Python", "Flask", "Scikit-learn", "Pandas", "NumPy"],
-    "github_link": "https://github.com/Alan21303/Chronic-Diseases-Prediction-System",
+    "github_link": "https://github.com/alanroy003/Chronic-Diseases-Prediction-System",
     "Live": true,
     "livedemo_link": "https://chronic-diseases-prediction-system-azdpwwbs3f9zynp42fwacu.streamlit.app/"
   },
@@ -116,7 +116,7 @@
       "Bootstrap 5",
       "Google OAuth"
     ],
-    "github_link": "https://github.com/Alan21303/Expenses-Tracker-ASP.NET-Mvc",
+    "github_link": "https://github.com/alanroy003/Expenses-Tracker-ASP.NET-Mvc",
     "Live": false,
     "livedemo_link": ""
   },
@@ -126,7 +126,7 @@
     "img_url": "/projectImages/DoAnyJob/Doanyjob.png",
     "description": "A user-friendly job portal designed to connect job seekers with locally available opportunities, featuring an intuitive interface for browsing, applying, and posting jobs within the community.",
     "tech": ["HTML", "CSS", "JavaScript"],
-    "github_link": "https://github.com/Alan21303/Doanyjob",
+    "github_link": "https://github.com/alanroy003/Doanyjob",
     "Live": false,
     "livedemo_link": ""
   }
