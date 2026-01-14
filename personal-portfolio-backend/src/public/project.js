@@ -6,10 +6,11 @@ async function loadProjects() {
   try {
     const res = await fetch(PROJECT_API);
     if (!res.ok) throw new Error("Failed to fetch projects");
+
     const result = await res.json();
     if (result.success) {
       projectsData = result.data || [];
-      console.log("Loaded projects:", projectsData); // debug path
+      // console.log("Projects loaded:", projectsData);
       renderProjects(projectsData);
     } else {
       console.error("Failed to load projects:", result);
@@ -23,13 +24,15 @@ async function loadProjects() {
 function filterProjects(filterType) {
   if (!Array.isArray(projectsData)) return;
   let filtered = [];
+
   if (filterType === "highlighted") {
     filtered = projectsData.filter((p) => p.highlighted);
   } else if (filterType === "non-highlighted") {
     filtered = projectsData.filter((p) => !p.highlighted);
   } else {
-    filtered = [...projectsData];
+    filtered = [...projectsData]; // all
   }
+
   renderProjects(filtered);
 }
 
@@ -40,15 +43,35 @@ function renderProjects(data) {
   tbody.innerHTML = "";
 
   data.forEach((proj) => {
+    // console.log("Project image URL:", proj.img_url); // Debug
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${proj.title}</td>
       <td>${Array.isArray(proj.tech) ? proj.tech.join(", ") : "-"}</td>
-      <td>${proj.highlighted ? "Yes" : "No"}</td>
-      <td>${proj.Live ? "Yes" : "No"}</td>
+      <td>
+        <select onchange="updateBooleanField('${
+          proj._id
+        }', 'highlighted', this.value)">
+          <option value="true" ${
+            proj.highlighted ? "selected" : ""
+          }>Yes</option>
+          <option value="false" ${
+            !proj.highlighted ? "selected" : ""
+          }>No</option>
+        </select>
+      </td>
+      <td>
+        <select onchange="updateBooleanField('${
+          proj._id
+        }', 'Live', this.value)">
+          <option value="true" ${proj.Live ? "selected" : ""}>Yes</option>
+          <option value="false" ${!proj.Live ? "selected" : ""}>No</option>
+        </select>
+      </td>
       <td>${
         proj.img && proj.img_url
-          ? `<img src="http://localhost:5000${proj.img_url}" alt="${proj.title}" width="100" />`
+          ? `<img src="${proj.img_url}" alt="${proj.title}" width="100" />`
           : "—"
       }</td>
       <td>
@@ -69,33 +92,40 @@ document
   .getElementById("projectForm")
   ?.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    const id = document.getElementById("projectId").value;
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+    const tech = JSON.parse(document.getElementById("tech").value || "[]");
+    const github_link = document.getElementById("github_link").value;
+    const livedemo_link = document.getElementById("livedemo_link").value;
+    const highlighted = document.getElementById("highlighted").checked;
+    const Live = document.getElementById("Live")?.checked || false;
+    const image = document.getElementById("image").files[0];
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("description", description);
+    formData.append("tech", JSON.stringify(tech));
+    formData.append("github_link", github_link);
+    formData.append("livedemo_link", livedemo_link);
+    formData.append("highlighted", highlighted);
+    formData.append("Live", Live);
+    if (image) formData.append("image", image);
+
     try {
-      const id = document.getElementById("projectId").value;
-      const title = document.getElementById("title").value;
-      const description = document.getElementById("description").value;
-      const tech = JSON.parse(document.getElementById("tech").value || "[]");
-      const github_link = document.getElementById("github_link").value;
-      const livedemo_link = document.getElementById("livedemo_link").value;
-      const highlighted = document.getElementById("highlighted").checked;
-      const Live = document.getElementById("Live").checked;
-      const image = document.getElementById("image").files[0];
-
-      const formData = new FormData();
-      formData.append("title", title);
-      formData.append("description", description);
-      formData.append("tech", JSON.stringify(tech));
-      formData.append("github_link", github_link);
-      formData.append("livedemo_link", livedemo_link);
-      formData.append("highlighted", highlighted);
-      formData.append("Live", Live);
-      if (image) formData.append("image", image);
-
-      const method = id ? "PUT" : "POST";
       const url = id ? `${PROJECT_API}/${id}` : PROJECT_API;
+      const method = id ? "PUT" : "POST";
 
-      await fetch(url, { method, body: formData });
-      resetProjectForm();
-      loadProjects();
+      const res = await fetch(url, { method, body: formData });
+      const result = await res.json();
+
+      if (result.success) {
+        resetProjectForm();
+        loadProjects();
+      } else {
+        console.error("Failed to save project:", result);
+      }
     } catch (err) {
       console.error("Error saving project:", err);
     }
@@ -106,8 +136,10 @@ async function editProject(id) {
   try {
     const res = await fetch(`${PROJECT_API}/${id}`);
     const result = await res.json();
+
     if (result.success) {
       const proj = result.data;
+
       document.getElementById("projectId").value = proj._id;
       document.getElementById("title").value = proj.title;
       document.getElementById("description").value = proj.description;
@@ -115,7 +147,8 @@ async function editProject(id) {
       document.getElementById("github_link").value = proj.github_link;
       document.getElementById("livedemo_link").value = proj.livedemo_link;
       document.getElementById("highlighted").checked = proj.highlighted;
-      document.getElementById("Live").checked = proj.Live;
+      if (document.getElementById("Live"))
+        document.getElementById("Live").checked = proj.Live;
     }
   } catch (err) {
     console.error("Error editing project:", err);
@@ -124,11 +157,14 @@ async function editProject(id) {
 
 // -------- Delete Project --------
 async function deleteProject(id) {
+  if (!window.confirm("Are you sure you want to delete this project?")) return;
+
   try {
-    if (window.confirm("Are you sure you want to delete this project?")) {
-      await fetch(`${PROJECT_API}/${id}`, { method: "DELETE" });
-      loadProjects();
-    }
+    const res = await fetch(`${PROJECT_API}/${id}`, { method: "DELETE" });
+    const result = await res.json();
+
+    if (result.success) loadProjects();
+    else console.error("Failed to delete project:", result);
   } catch (err) {
     console.error("Error deleting project:", err);
   }
@@ -140,5 +176,29 @@ function resetProjectForm() {
   document.getElementById("projectId").value = "";
 }
 
-// -------- Init Filters --------
+// -------- Update Boolean Field Inline --------
+async function updateBooleanField(id, field, value) {
+  try {
+    const formData = new FormData();
+    formData.append(field, value === "true");
+
+    await fetch(`${PROJECT_API}/${id}`, { method: "PUT", body: formData });
+    loadProjects();
+  } catch (err) {
+    console.error(`Error updating ${field} for project ${id}:`, err);
+  }
+}
+
+// -------- Filter Buttons Init --------
+document
+  .getElementById("filterAll")
+  ?.addEventListener("click", () => filterProjects("all"));
+document
+  .getElementById("filterHighlighted")
+  ?.addEventListener("click", () => filterProjects("highlighted"));
+document
+  .getElementById("filterNonHighlighted")
+  ?.addEventListener("click", () => filterProjects("non-highlighted"));
+
+// Initial load
 loadProjects();
