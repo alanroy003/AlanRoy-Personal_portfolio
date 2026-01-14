@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+
+/personal-portfolio-backend/node_modules
+
+/personal-portfolio-backend/.env
+
 # testing
 /coverage
 
