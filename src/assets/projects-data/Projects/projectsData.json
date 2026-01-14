@@ -14,7 +14,8 @@
     ],
     "github_link": "https://github.com/alanroy003/community-issue-tracker",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "Employee Management System",
@@ -32,7 +33,8 @@
     ],
     "github_link": "https://github.com/alanroy003/EmployeeManagement-.net-MVC",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "Rossmann Sales Forecasting",
@@ -49,7 +51,8 @@
     ],
     "github_link": "https://github.com/alanroy003/rossmann-sales-forecast",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "Titanic Survival Prediction App",
@@ -66,7 +69,8 @@
     ],
     "github_link": "https://github.com/alanroy003/titanic-end2end-ml",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "Travello - Travel Website",
@@ -76,7 +80,8 @@
     "tech": ["Django", "HTML", "CSS", "JavaScript", "MongoDB"],
     "github_link": "https://github.com/alanroy003/Travello",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "AspNetCore To-Do App MVC",
@@ -92,7 +97,8 @@
     ],
     "github_link": "https://github.com/alanroy003/AspNetCore-ToDo-App-MVC",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "Chronic Diseases Prediction System",
@@ -102,7 +108,8 @@
     "tech": ["Python", "Flask", "Scikit-learn", "Pandas", "NumPy"],
     "github_link": "https://github.com/alanroy003/Chronic-Diseases-Prediction-System",
     "Live": true,
-    "livedemo_link": "https://chronic-diseases-prediction-system-azdpwwbs3f9zynp42fwacu.streamlit.app/"
+    "livedemo_link": "https://chronic-diseases-prediction-system-azdpwwbs3f9zynp42fwacu.streamlit.app/",
+    "highlighted": false
   },
   {
     "title": "Expenses Tracker – ASP.NET Core MVC",
@@ -118,7 +125,8 @@
     ],
     "github_link": "https://github.com/alanroy003/Expenses-Tracker-ASP.NET-Mvc",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   },
   {
     "title": "DoAnyJob – Job Finder Website",
@@ -128,6 +136,7 @@
     "tech": ["HTML", "CSS", "JavaScript"],
     "github_link": "https://github.com/alanroy003/Doanyjob",
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": false
   }
 ]

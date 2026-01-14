@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Portfolio Admin Dashboard</h1>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('profile')">Profile</button>
+        <button class="tab" onclick="showTab('projects')">Projects</button>
+      </div>
+
+      <!-- PROFILE TAB -->
+      <div id="profileTab" class="tab-content active">
+        <section>
+          <h2>Resume</h2>
+          <p class="current">
+            <strong>Current:</strong>
+            <span id="currentResume">—</span>
+          </p>
+
+          <input id="resumeInput" placeholder="Enter new resume URL" />
+          <button onclick="updateResume()">Save</button>
+          <button class="danger" onclick="deleteResume()">Delete</button>
+        </section>
+
+        <section>
+          <h2>Social Links</h2>
+          <div class="social">
+            <label>GitHub</label>
+            <span id="current-github" class="current">—</span>
+            <input id="github" placeholder="New GitHub URL" />
+            <button onclick="saveSocial('github')">Save</button>
+            <button class="danger" onclick="deleteSocial('github')">
+              Delete
+            </button>
+          </div>
+
+          <div class="social">
+            <label>LinkedIn</label>
+            <span id="current-linkedin" class="current">—</span>
+            <input id="linkedin" placeholder="New LinkedIn URL" />
+            <button onclick="saveSocial('linkedin')">Save</button>
+            <button class="danger" onclick="deleteSocial('linkedin')">
+              Delete
+            </button>
+          </div>
+
+          <div class="social">
+            <label>Instagram</label>
+            <span id="current-instagram" class="current">—</span>
+            <input id="instagram" placeholder="New Instagram URL" />
+            <button onclick="saveSocial('instagram')">Save</button>
+            <button class="danger" onclick="deleteSocial('instagram')">
+              Delete
+            </button>
+          </div>
+
+          <div class="social">
+            <label>Facebook</label>
+            <span id="current-facebook" class="current">—</span>
+            <input id="facebook" placeholder="New Facebook URL" />
+            <button onclick="saveSocial('facebook')">Save</button>
+            <button class="danger" onclick="deleteSocial('facebook')">
+              Delete
+            </button>
+          </div>
+
+          <div class="social">
+            <label>Gmail</label>
+            <span id="current-gmail" class="current">—</span>
+            <input id="gmail" placeholder="New Gmail URL" />
+            <button onclick="saveSocial('gmail')">Save</button>
+            <button class="danger" onclick="deleteSocial('gmail')">
+              Delete
+            </button>
+          </div>
+
+          <div class="social">
+            <label>Twitter</label>
+            <span id="current-twitter" class="current">—</span>
+            <input id="twitter" placeholder="New Twitter URL" />
+            <button onclick="saveSocial('twitter')">Save</button>
+            <button class="danger" onclick="deleteSocial('twitter')">
+              Delete
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- PROJECTS TAB -->
+      <div id="projectsTab" class="tab-content">
+        <!-- The project.html content will be loaded here dynamically -->
+        <div id="projectContainer">Loading projects...</div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script>
+      // Dynamically load project.html content into the Projects tab
+      async function loadProjectSection() {
+        const res = await fetch("project.html");
+        const html = await res.text();
+        document.getElementById("projectContainer").innerHTML = html;
+
+        // After loading, initialize the project.js logic
+        const script = document.createElement("script");
+        script.src = "project.js";
+        document.body.appendChild(script);
+      }
+
+      // Load project section only when Projects tab is clicked
+      function showTab(tab) {
+        document
+          .querySelectorAll(".tab")
+          .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((c) => c.classList.remove("active"));
+
+        document
+          .querySelector(`button[onclick="showTab('${tab}')"]`)
+          .classList.add("active");
+        const tabEl = document.getElementById(`${tab}Tab`);
+        tabEl.classList.add("active");
+
+        if (tab === "projects") loadProjectSection();
+      }
+    </script>
+  </body>
+</html>

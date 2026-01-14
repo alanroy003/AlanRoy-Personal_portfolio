@@ -1,0 +1,69 @@
+<!-- project.html -->
+<div id="projectSection" class="dashboard-container">
+  <section class="form-section">
+    <h2>Add / Update Project</h2>
+    <form id="projectForm" class="project-form">
+      <input type="hidden" id="projectId" />
+
+      <label>Title:</label>
+      <input type="text" id="title" placeholder="Project title" required />
+
+      <label>Description:</label>
+      <textarea id="description" placeholder="Project description"></textarea>
+
+      <label>Tech Stack (JSON Array):</label>
+      <input
+        type="text"
+        id="tech"
+        placeholder='e.g. ["Flutter","Dart","TensorFlow Lite"]'
+      />
+
+      <label>GitHub URL:</label>
+      <input type="text" id="github_link" placeholder="GitHub link" />
+
+      <label>Live Demo URL:</label>
+      <input type="text" id="livedemo_link" placeholder="Live demo link" />
+
+      <label> <input type="checkbox" id="highlighted" /> Highlighted </label>
+
+      <label> <input type="checkbox" id="Live" /> Live </label>
+
+      <label>Project Image:</label>
+      <input type="file" id="image" accept="image/*" />
+
+      <div class="form-buttons">
+        <button type="submit">Save Project</button>
+        <button type="button" onclick="resetProjectForm()">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>Existing Projects</h2>
+
+    <div class="filter-buttons">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('highlighted')">Highlighted</button>
+      <button onclick="filterProjects('non-highlighted')">
+        Non-highlighted
+      </button>
+    </div>
+
+    <table id="projectsTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Tech</th>
+          <th>Highlighted</th>
+          <th>Live</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</div>
+
+<link rel="stylesheet" href="project.css" />
+<script src="project.js"></script>

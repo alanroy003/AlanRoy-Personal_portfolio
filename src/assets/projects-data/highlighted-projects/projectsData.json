@@ -19,7 +19,8 @@
 
     "Live": false,
 
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": true
   },
   {
     "title": "EduCloudX – AI Learning Platform",
@@ -41,6 +42,7 @@
     "github_link": "https://github.com/alanroy003/EduCloudX-AI-Learning-Platform",
 
     "Live": false,
-    "livedemo_link": ""
+    "livedemo_link": "",
+    "highlighted": true
   }
 ]
