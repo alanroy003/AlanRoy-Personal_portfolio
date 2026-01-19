@@ -25,7 +25,7 @@
   {
     "title": "Rydio – Car Rental System",
     "img": true,
-    "img_url1": "/projectImages/rydio-car-rental-system/rydio-car-rental-system-1768403257519.png",
+    "img_url1": "/projectImages/rydio---car-rental-system/rydio---car-rental-system-1768403257519.png",
     "description": "Rydio is a full-stack car rental platform built with MERN stack (MongoDB, Express, React, Node.js) that allows users to browse available cars, book rentals, and manage their reservations. It includes user authentication, admin dashboard for managing cars and bookings, Stripe payment integration for secure online payments, and a responsive UI for seamless booking experience.",
     "tech": [
       "JavaScript",
