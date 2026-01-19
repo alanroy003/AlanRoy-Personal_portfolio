@@ -39,7 +39,7 @@
   {
     "title": "Rossmann Sales Forecasting",
     "img": true,
-    "img_url": "/projectImages/rossmann-sales-forecast/rossmann.png",
+    "img_url": "/projectImages/rossmann-sales-forecasting/rossmann-sales-forecasting-1768402237570.png",
     "description": "An end-to-end machine learning pipeline for forecasting daily Rossmann store sales, featuring data preprocessing, model training, evaluation, and deployment through a Streamlit dashboard.",
     "tech": [
       "Python",
@@ -57,7 +57,7 @@
   {
     "title": "Titanic Survival Prediction App",
     "img": true,
-    "img_url": "/projectImages/titanic/titanic.jpg",
+    "img_url": "/projectImages/titanic-survival-prediction-app/titanic-survival-prediction-app-1768402302902.jpg",
     "description": "An end-to-end machine learning web app built with Streamlit to predict Titanic passenger survival, featuring Dockerized deployment, interactive UI, and tuned ML models for accuracy.",
     "tech": [
       "Python",
@@ -103,7 +103,7 @@
   {
     "title": "Chronic Diseases Prediction System",
     "img": true,
-    "img_url": "/projectImages/Chronic-Diseases-Prediction/Chronic-Diseases-Prediction.png",
+    "img_url": "/projectImages/chronic-diseases-prediction-system/chronic-diseases-prediction-system-1768402649852.png",
     "description": "A machine learning-based web application built with Python that predicts the likelihood of multiple chronic diseases using trained models and health data inputs through a simple interactive interface.",
     "tech": ["Python", "Flask", "Scikit-learn", "Pandas", "NumPy"],
     "github_link": "https://github.com/alanroy003/Chronic-Diseases-Prediction-System",
@@ -114,7 +114,7 @@
   {
     "title": "Expenses Tracker – ASP.NET Core MVC",
     "img": true,
-    "img_url": "/projectImages/Expensestracker/viewExpenses-window.png",
+    "img_url": "/projectImages/expenses-tracker-–-asp.net-core-mvc/expenses-tracker-–-asp.net-core-mvc-1768402726031.png",
     "description": "A personal finance management app built with ASP.NET Core MVC and Entity Framework Core, enabling users to record, categorize, and analyze expenses with Google SSO authentication and responsive Bootstrap UI.",
     "tech": [
       "ASP.NET Core MVC",
@@ -131,7 +131,7 @@
   {
     "title": "DoAnyJob – Job Finder Website",
     "img": true,
-    "img_url": "/projectImages/DoAnyJob/Doanyjob.png",
+    "img_url": "/projectImages/doanyjob-–-job-finder-website/doanyjob-–-job-finder-website-1768402845620.png",
     "description": "A user-friendly job portal designed to connect job seekers with locally available opportunities, featuring an intuitive interface for browsing, applying, and posting jobs within the community.",
     "tech": ["HTML", "CSS", "JavaScript"],
     "github_link": "https://github.com/alanroy003/Doanyjob",
