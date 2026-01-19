@@ -2,7 +2,7 @@
   {
     "title": "Healing Bloom - Flutter App",
     "img": true,
-    "img_url1": "/projectImages/healingBloom/healingbloom.png",
+    "img_url1": "/projectImages/healing-bloom/healing-bloom-1768412397889.png",
 
     "description": "Healing Bloom is a Flutter-based mobile application that helps users identify skin diseases using advanced image recognition powered by Inspection Rusnet V2. It also offers personalized skincare and cosmetic product recommendations through face scanning and features an integrated shopping platform for medicines and beauty products.",
 
@@ -22,33 +22,31 @@
     "livedemo_link": "",
     "highlighted": true
   },
-
   {
-  "title": "Rydio - Car Rental System",
-  "description": "Rydio is a full-stack car rental platform built with the MERN stack (MongoDB, Express, React, Node.js) that allows users to browse available cars, book rentals, and manage their reservations. It includes user authentication, an admin dashboard for managing cars and bookings, Stripe payment integration for secure online payments, and a responsive UI for a seamless booking experience.",
-  "tech": [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Mongoose",
-    "Bootstrap 5",
-    "JWT",
-    "Stripe API"
-  ],
-  "github_link": "https://github.com/alanroy003/Rydio-Car-Rental-System",
-  "live": true,
-  "livedemo_link": "https://rydio-car-rental-system.vercel.app/",
-  "highlighted": true,
-  "img": true,
-  "img_url": "/projectImages/rydio-car-rental-system/rydio-car-rental-system-1768403257519.png"
-}
-,
+    "title": "Rydio – Car Rental System",
+    "img": true,
+    "img_url1": "/projectImages/rydio-car-rental-system/rydio-car-rental-system-1768403257519.png",
+    "description": "Rydio is a full-stack car rental platform built with MERN stack (MongoDB, Express, React, Node.js) that allows users to browse available cars, book rentals, and manage their reservations. It includes user authentication, admin dashboard for managing cars and bookings, Stripe payment integration for secure online payments, and a responsive UI for seamless booking experience.",
+    "tech": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Bootstrap 5",
+      "JWT",
+      "Stripe API"
+    ],
+    "github_link": "https://github.com/alanroy003/Rydio-Car-Rental-System",
+    "Live": true,
+    "livedemo_link": "https://rydio-car-rental-system.vercel.app/",
+    "highlighted": true
+  },
   {
     "title": "EduCloudX – AI Learning Platform",
     "img": true,
-    "img_url1": "/projectImages/Educloudx/educloudx.png",
+    "img_url1": "/projectImages/educloudx-–-ai-learning-platform/educloudx-–-ai-learning-platform-1768403378198.png",
 
     "description": "EduCloudX is an AI-powered social learning platform built with Django, designed to connect students and educators through personalized, collaborative, and interactive learning. It features course management, AI-driven PDF summarization, content generation using Hugging Face APIs, and secure authentication via Google OAuth2.",
 
