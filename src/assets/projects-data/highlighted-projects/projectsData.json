@@ -24,8 +24,8 @@
   },
 
   {
-"title": "Rydio – Car Rental System",
-  "description": "Rydio is a full-stack car rental platform built with MERN stack (MongoDB, Express, React, Node.js) that allows users to browse available cars, book rentals, and manage their reservations. It includes user authentication, admin dashboard for managing cars and bookings, Stripe payment integration for secure online payments, and a responsive UI for seamless booking experience.",
+  "title": "Rydio - Car Rental System",
+  "description": "Rydio is a full-stack car rental platform built with the MERN stack (MongoDB, Express, React, Node.js) that allows users to browse available cars, book rentals, and manage their reservations. It includes user authentication, an admin dashboard for managing cars and bookings, Stripe payment integration for secure online payments, and a responsive UI for a seamless booking experience.",
   "tech": [
     "JavaScript",
     "React",
@@ -38,12 +38,13 @@
     "Stripe API"
   ],
   "github_link": "https://github.com/alanroy003/Rydio-Car-Rental-System",
-  "Live": true,
+  "live": true,
   "livedemo_link": "https://rydio-car-rental-system.vercel.app/",
   "highlighted": true,
   "img": true,
-  "img_url": "/projectImages/rydio-–-car-rental-system/rydio-–-car-rental-system-1768403257519.png"
-  },
+  "img_url": "/projectImages/rydio-car-rental-system/rydio-car-rental-system-1768403257519.png"
+}
+,
   {
     "title": "EduCloudX – AI Learning Platform",
     "img": true,
